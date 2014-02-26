@@ -14,5 +14,14 @@ function pageLoaded() {
 	
 	
 }
+
+//load jquery
+
+//load google scripts
+
+//load dataset 
+
+//load chart
+
 // pageLoaded function
 $(document).ready(pageLoaded);
