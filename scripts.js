@@ -33,9 +33,9 @@ var displayData = [displayDataHeader];
 //begin for loop with starting point, ending point and 
 //increment of observations to be counted
 for (var i = 0; i < observations.length; i++) {
-	// dfine loopedObs as "i" of observations
+	// define loopedObs as "i" of observations
 	
-	var loopedObs = [i];
+	var loopedObs = observations[i];
 	
 	//arrange sorted dates and values from observations
 	// into a new array called "sortedData"
@@ -50,7 +50,18 @@ for (var i = 0; i < observations.length; i++) {
 // Log data from "displayData" to show function is working
 console.log(displayData);
 
+//Create a data table from "displayData"
+var unmpDataTable = google.visualization.arrayToDataTable(displayData);
+
+// Draw the linegraph in html div "graph div" 
+
+var unmpGraph = new google.visualization.LineChart(document.getElementById("UnmpGraphDiv"));
+unmpGraph.draw(unmpDataTable)
+ 
 }//end of jsonLoaded function
+
+
+
 
 //build googleLoaded function
 //with Unemployment file imported
